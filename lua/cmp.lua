@@ -1,3 +1,10 @@
+vim.api.nvim_create_autocmd("InsertEnter", {
+  callback = function()
+    print("InsertEnter")
+  end,
+})
+
+--
 -- vim.api.nvim_create_autocmd("InsertEnter", {
 --   callback = function()
 --     print("InsertEnter")
