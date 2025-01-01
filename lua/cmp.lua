@@ -1,6 +1,6 @@
-vim.api.nvim_create_autocmd("InsertEnter", {
-  callback = function()
-    print("InsertEnter")
+-- vim.api.nvim_create_autocmd("InsertEnter", {
+--   callback = function()
+--     print("InsertEnter")
     local cmp = require("cmp")
     local luasnip = require("luasnip")
 
@@ -113,5 +113,5 @@ vim.api.nvim_create_autocmd("InsertEnter", {
         end,
       },
     })
-  end,
-})
+--   end,
+-- })
