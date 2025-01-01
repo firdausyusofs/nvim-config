@@ -1,5 +1,5 @@
 require("config.options")
 require("config.keymaps")
 require("config.terminal")
-require("lsp")
 require("cmp")
+require("lsp")
