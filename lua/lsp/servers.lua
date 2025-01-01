@@ -7,17 +7,17 @@ return {
 			},
 		},
 	},
-    clangd = {
-        -- root_dir = require("lspconfig.util").root_pattern(
-        --     "compile_commands.json",
-        --     "compile_flags.txt",
-        --     ".git"
-        -- ),
-        cmd = {
-            "clangd",
-            "--offset-encoding=utf-16",
-        },
-    },
+  -- clangd = {
+  --     -- root_dir = require("lspconfig.util").root_pattern(
+  --     --     "compile_commands.json",
+  --     --     "compile_flags.txt",
+  --     --     ".git"
+  --     -- ),
+  --     cmd = {
+  --         "clangd",
+  --         "--offset-encoding=utf-16",
+  --     },
+  -- },
     -- clangd = {
     --     cmd = { "clangd", "--background-index" },
     --     filetypes = { "c", "cpp", "objc", "objcpp" },
