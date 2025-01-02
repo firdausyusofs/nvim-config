@@ -55,6 +55,7 @@ local options = {
   cursorlineopt = "number",
   undofile = true,
 	guicursor = "",
+  colorcolumn = "80",
 }
 
 for k, v in pairs(options) do
