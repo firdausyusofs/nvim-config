@@ -49,7 +49,7 @@ vim.diagnostic.config({
 local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 local diagnostic_signs = {}
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. typej
+  local hl = "DiagnosticSign" .. type
   table.insert(diagnostic_signs, { name = hl, text = icon, texthl = hl, numhl = "" })
   --vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
