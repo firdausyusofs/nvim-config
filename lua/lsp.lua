@@ -55,7 +55,7 @@ for type, icon in pairs(signs) do
 end
 vim.diagnostic.config({
   signs = diagnostic_signs,
-}
+})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   callback = function(args)
