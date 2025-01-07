@@ -27,10 +27,10 @@ telescope.setup({
     mappings = {
       i = {
         ["<esc>"] = actions.close,
-        ["<C-t>"] = open_with_trouble,
+        -- ["<C-t>"] = open_with_trouble,
       },
 
-      n = { ["<C-t>"] = open_with_trouble },
+      -- n = { ["<C-t>"] = open_with_trouble },
     },
     previewer = true,
     -- hidden = true,
