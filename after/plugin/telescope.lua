@@ -133,26 +133,26 @@ telescope.setup({
       override_file_sorter = true, -- override the file sorter
       case_mode = "smart_case", -- or "ignore_case" or "respect_case"
     },
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown({
-        previewer = false,
-        initial_mode = "insert",
-        sorting_strategy = "ascending",
-        -- layout_strategy = "horizontal",
-        -- layout_config = {
-        --   horizontal = {
-        --     width = 0.5,
-        --     height = 0.4,
-        --     preview_width = 0.6,
-        --   },
-        -- },
-        layout_strategy = "vertical",
-        layout_config = {
-          prompt_position = "bottom",
-          preview_cutoff = 120,
-        },
-      }),
-    },
+    -- ["ui-select"] = {
+    --   require("telescope.themes").get_dropdown({
+    --     previewer = false,
+    --     initial_mode = "insert",
+    --     sorting_strategy = "ascending",
+    --     -- layout_strategy = "horizontal",
+    --     -- layout_config = {
+    --     --   horizontal = {
+    --     --     width = 0.5,
+    --     --     height = 0.4,
+    --     --     preview_width = 0.6,
+    --     --   },
+    --     -- },
+    --     layout_strategy = "vertical",
+    --     layout_config = {
+    --       prompt_position = "bottom",
+    --       preview_cutoff = 120,
+    --     },
+    --   }),
+    -- },
   },
 })
 
