@@ -25,7 +25,7 @@ local options = {
 	swapfile = false,
 	termguicolors = true,
 	timeoutlen = 1000,
-	updatetime = 100,
+	updatetime = 1,
 	writebackup = false,
 	expandtab = true,
 	modifiable = true,
@@ -62,4 +62,4 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.cmd([[colorscheme onehalfdark]])
+vim.cmd([[colorscheme rose-pine]])
