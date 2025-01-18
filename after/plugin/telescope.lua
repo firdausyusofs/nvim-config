@@ -60,72 +60,72 @@ telescope.setup({
       "--glob=!.git/",
     },
   },
-  pickers = {
-    find_files = {
-      previewer = false,
-      path_display = formattedName,
-      layout_config = {
-        height = 0.4,
-        prompt_position = "top",
-        preview_cutoff = 120,
-      },
-    },
-    git_files = {
-      previewer = false,
-      path_display = formattedName,
-      layout_config = {
-        height = 0.4,
-        prompt_position = "top",
-        preview_cutoff = 120,
-      },
-    },
-    buffers = {
-      path_display = formattedName,
-      mappings = {
-        i = {
-          ["<c-d>"] = actions.delete_buffer,
-        },
-        n = {
-          ["<c-d>"] = actions.delete_buffer,
-        },
-      },
-      previewer = true,
-      initial_mode = "insert",
-      -- theme = "dropdown",
-      layout_config = {
-        height = 0.4,
-        width = 0.6,
-        prompt_position = "top",
-        preview_cutoff = 120,
-      },
-    },
-    current_buffer_fuzzy_find = {
-      previewer = true,
-      layout_config = {
-        prompt_position = "top",
-        preview_cutoff = 120,
-      },
-    },
-    live_grep = {
-      only_sort_text = true,
-      previewer = true,
-    },
-    grep_string = {
-      only_sort_text = true,
-      previewer = true,
-    },
-    lsp_references = {
-      show_line = false,
-      previewer = true,
-    },
-    treesitter = {
-      show_line = false,
-      previewer = true,
-    },
-    colorscheme = {
-      enable_preview = true,
-    },
-  },
+  -- pickers = {
+  --   find_files = {
+  --     previewer = false,
+  --     path_display = formattedName,
+  --     layout_config = {
+  --       height = 0.4,
+  --       prompt_position = "top",
+  --       preview_cutoff = 120,
+  --     },
+  --   },
+  --   git_files = {
+  --     previewer = false,
+  --     path_display = formattedName,
+  --     layout_config = {
+  --       height = 0.4,
+  --       prompt_position = "top",
+  --       preview_cutoff = 120,
+  --     },
+  --   },
+  --   buffers = {
+  --     path_display = formattedName,
+  --     mappings = {
+  --       i = {
+  --         ["<c-d>"] = actions.delete_buffer,
+  --       },
+  --       n = {
+  --         ["<c-d>"] = actions.delete_buffer,
+  --       },
+  --     },
+  --     previewer = true,
+  --     initial_mode = "insert",
+  --     -- theme = "dropdown",
+  --     layout_config = {
+  --       height = 0.4,
+  --       width = 0.6,
+  --       prompt_position = "top",
+  --       preview_cutoff = 120,
+  --     },
+  --   },
+  --   current_buffer_fuzzy_find = {
+  --     previewer = true,
+  --     layout_config = {
+  --       prompt_position = "top",
+  --       preview_cutoff = 120,
+  --     },
+  --   },
+  --   live_grep = {
+  --     only_sort_text = true,
+  --     previewer = true,
+  --   },
+  --   grep_string = {
+  --     only_sort_text = true,
+  --     previewer = true,
+  --   },
+  --   lsp_references = {
+  --     show_line = false,
+  --     previewer = true,
+  --   },
+  --   treesitter = {
+  --     show_line = false,
+  --     previewer = true,
+  --   },
+  --   colorscheme = {
+  --     enable_preview = true,
+  --   },
+  -- },
   extensions = {
     fzf = {
       fuzzy = true, -- false will only do exact matching
