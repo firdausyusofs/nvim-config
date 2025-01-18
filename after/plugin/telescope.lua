@@ -44,10 +44,10 @@ telescope.setup({
     color_devicons = true,
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     -- layout_strategy = "horizontal",
-    layout_config = {
-      prompt_position = "top",
-      preview_cutoff = 120,
-    },
+    -- layout_config = {
+    --   prompt_position = "top",
+    --   preview_cutoff = 120,
+    -- },
     vimgrep_arguments = {
       "rg",
       "--color=never",
@@ -138,13 +138,18 @@ telescope.setup({
         previewer = false,
         initial_mode = "insert",
         sorting_strategy = "ascending",
-        layout_strategy = "horizontal",
+        -- layout_strategy = "horizontal",
+        -- layout_config = {
+        --   horizontal = {
+        --     width = 0.5,
+        --     height = 0.4,
+        --     preview_width = 0.6,
+        --   },
+        -- },
+        layout_strategy = "vertical",
         layout_config = {
-          horizontal = {
-            width = 0.5,
-            height = 0.4,
-            preview_width = 0.6,
-          },
+          prompt_position = "bottom",
+          preview_cutoff = 120,
         },
       }),
     },
