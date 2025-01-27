@@ -4,10 +4,10 @@ local map = vim.keymap.set
 vim.api.nvim_set_var("mapleader", " ")
 
 -- Basic movement keys
-vim.keymap.set("n", "<C-j>", "<c-w><c-j>")
-vim.keymap.set("n", "<C-k>", "<c-w><c-k>")
-vim.keymap.set("n", "<C-l>", "<c-w><c-l>")
-vim.keymap.set("n", "<C-h>", "<c-w><c-h>")
+vim.keymap.set("n", "<c-j>", "<c-w><c-j>")
+vim.keymap.set("n", "<c-k>", "<c-w><c-k>")
+vim.keymap.set("n", "<c-l>", "<c-w><c-l>")
+vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
 
 -- Keep cursor centered when scrolling
 map("n", "<C-d>", "<C-d>zz", opts)
