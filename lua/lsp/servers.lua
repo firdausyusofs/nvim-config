@@ -126,9 +126,11 @@ return {
     -- }
   },
   ols = {
-    cmd = { "ols" },
-    filetypes = { "odin" },
-    root_dir = require("lspconfig.util").root_pattern("ols.json"),
+    ols = {
+      cmd = { "ols" },
+      filetypes = { "odin" },
+      root_dir = require("lspconfig.util").root_pattern("ols.json"),
+    }
   },
     -- sourcekit = {
     --     cmd = {
