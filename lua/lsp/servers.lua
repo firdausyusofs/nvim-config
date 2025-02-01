@@ -125,13 +125,7 @@ return {
     --   max_detail_length = 1048576,
     -- }
   },
-  ols = {
-    ols = {
-      cmd = { "ols" },
-      filetypes = { "odin" },
-      root_dir = require("lspconfig.util").root_pattern("ols.json"),
-    }
-  },
+  ols = {},
     -- sourcekit = {
     --     cmd = {
     --         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
