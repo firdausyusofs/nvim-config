@@ -1,7 +1,6 @@
 require("nvim-treesitter.configs").setup({
 	-- ensure_installed = "all",
   ensure_installed = {},
-  enable_autocmd = false,
 	indent = { enable = true, disable = { "python", "yaml" } },
 	-- yati = { enable = true },
 	highlight = {
