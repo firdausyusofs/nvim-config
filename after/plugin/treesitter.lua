@@ -16,48 +16,48 @@ require("nvim-treesitter.configs").setup({
 		-- colors = {}, -- table of hex strings
 		-- termcolors = {} -- table of colour name strings
 	},
-	textobjects = {
-		select = {
-			enable = true,
-
-			-- Automatically jump forward to textobj, similar to targets.vim
-			lookahead = true,
-
-			keymaps = {
-				-- You can use the capture groups defined in textobjects.scm
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-				["ac"] = "@class.outer",
-				["ic"] = "@class.inner",
-				["aa"] = "@parameter.outer",
-				["ia"] = "@parameter.inner",
-				["as"] = "@statement.outer",
-				-- ["is"] = "@scopename.inner",
-				["ib"] = "@block.inner",
-				["ab"] = "@block.outer",
-				["ak"] = "@comment.outer",
-			},
-		},
-		swap = {
-			enable = true,
-			swap_next = {
-				["<C-l>"] = "@parameter.inner",
-				["<C-j>"] = "@statement.outer",
-			},
-			swap_previous = {
-				["<C-h>"] = "@parameter.inner",
-				["<C-k>"] = "@statement.outer",
-			},
-		},
-		move = {
-			enable = true,
-			set_jumps = true,
-			goto_next_start = {
-				[")"] = "@block.outer",
-			},
-			goto_previous_start = {
-				["("] = "@block.outer",
-			},
-		},
-	},
+	-- textobjects = {
+	-- 	select = {
+	-- 		enable = true,
+	--
+	-- 		-- Automatically jump forward to textobj, similar to targets.vim
+	-- 		lookahead = true,
+	--
+	-- 		keymaps = {
+	-- 			-- You can use the capture groups defined in textobjects.scm
+	-- 			["af"] = "@function.outer",
+	-- 			["if"] = "@function.inner",
+	-- 			["ac"] = "@class.outer",
+	-- 			["ic"] = "@class.inner",
+	-- 			["aa"] = "@parameter.outer",
+	-- 			["ia"] = "@parameter.inner",
+	-- 			["as"] = "@statement.outer",
+	-- 			-- ["is"] = "@scopename.inner",
+	-- 			["ib"] = "@block.inner",
+	-- 			["ab"] = "@block.outer",
+	-- 			["ak"] = "@comment.outer",
+	-- 		},
+	-- 	},
+	-- 	swap = {
+	-- 		enable = true,
+	-- 		swap_next = {
+	-- 			["<C-l>"] = "@parameter.inner",
+	-- 			["<C-j>"] = "@statement.outer",
+	-- 		},
+	-- 		swap_previous = {
+	-- 			["<C-h>"] = "@parameter.inner",
+	-- 			["<C-k>"] = "@statement.outer",
+	-- 		},
+	-- 	},
+	-- 	move = {
+	-- 		enable = true,
+	-- 		set_jumps = true,
+	-- 		goto_next_start = {
+	-- 			[")"] = "@block.outer",
+	-- 		},
+	-- 		goto_previous_start = {
+	-- 			["("] = "@block.outer",
+	-- 		},
+	-- 	},
+	-- },
 })
