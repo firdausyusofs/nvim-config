@@ -267,5 +267,5 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Open parent directory in floating window
 vim.keymap.set("n", "<space>-", require("oil").toggle_float)
 
-vim.keymap.set("n", "[d", "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>", { desc = "Go to previous diagnostic" })
-vim.keymap.set("n", "]d", "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>", { desc = "Go to next diagnostic" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
