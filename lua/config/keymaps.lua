@@ -266,19 +266,3 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Open parent directory in floating window
 vim.keymap.set("n", "<space>-", require("oil").toggle_float)
-
-vim.keymap.set('n', ']d', function()
-  vim.diagnostic.jump({ count = vim.v.count1 })
-end, { desc = 'Jump to the next diagnostic in the current buffer' })
-
-vim.keymap.set('n', '[d', function()
-  vim.diagnostic.jump({ count = -vim.v.count1 })
-end, { desc = 'Jump to the previous diagnostic in the current buffer' })
-
-vim.keymap.set('n', ']D', function()
-  vim.diagnostic.jump({ count = math.huge, wrap = false })
-end, { desc = 'Jump to the last diagnostic in the current buffer' })
-
-vim.keymap.set('n', '[D', function()
-  vim.diagnostic.jump({ count = -math.huge, wrap = false })
-end, { desc = 'Jump to the first diagnostic in the current buffer' })
