@@ -7,28 +7,28 @@ return {
 			},
 		},
 	},
-  clangd = {
-      -- root_dir = require("lspconfig.util").root_pattern(
-      --     "compile_commands.json",
-      --     "compile_flags.txt",
-      --     ".git"
-      -- ),
-      cmd = {
-          "clangd",
-          "--offset-encoding=utf-16",
-      },
-  },
-    -- clangd = {
-    --     cmd = { "clangd", "--background-index" },
-    --     filetypes = { "c", "cpp", "objc", "objcpp" },
-    --     root_dir = require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
-    --     init_options = {
-    --         clangdFileStatus = true,
-    --         usePlaceholders = true,
-    --         completeUnimported = true,
-    --         semanticHighlighting = true,
-    --     },
-    -- },
+  -- clangd = {
+  --     -- root_dir = require("lspconfig.util").root_pattern(
+  --     --     "compile_commands.json",
+  --     --     "compile_flags.txt",
+  --     --     ".git"
+  --     -- ),
+  --     cmd = {
+  --         "clangd",
+  --         "--offset-encoding=utf-16",
+  --     },
+  -- },
+    clangd = {
+        cmd = { "clangd", "--background-index" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        init_options = {
+            clangdFileStatus = true,
+            usePlaceholders = true,
+            completeUnimported = true,
+            semanticHighlighting = true,
+        },
+    },
 	intelephense = {
 		settings = {
 			intelephense = {
