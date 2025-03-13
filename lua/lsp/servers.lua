@@ -16,7 +16,7 @@ return {
       cmd = {
           "clangd",
           "--background-index",
-          "--offset-encoding=utf-16",
+          "--offset-encoding=utf-8",
       },
   },
     -- clangd = {
