@@ -11,9 +11,9 @@ require("fzf-lua").setup{
   --   previewers = { ...  },  -- Previewers options
   --   -- SPECIFIC COMMAND/PICKER OPTIONS, SEE BELOW
   --   -- files = { ... },
-  -- previewers = {
-  --   builtin = { treesitter = { enable = false } }
-  -- },
+  previewers = {
+    builtin = { treesitter = { enable = false } }
+  },
 
   keymap = {
     -- Below are the default binds, setting any value in these tables will override
