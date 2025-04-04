@@ -62,4 +62,4 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.cmd([[colorscheme rose-pine]])
+vim.cmd([[colorscheme spaceduck]])
