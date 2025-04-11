@@ -62,7 +62,7 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- vim.cmd([[colorscheme spaceduck]])
+vim.cmd([[colorscheme rose-pine]])
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "NonText", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "LineNr", { bg = "#000000" })
