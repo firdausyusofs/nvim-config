@@ -92,6 +92,17 @@ map("n", "<leader>fG", ':execute "Telescope live_grep default_text=" . expand("<
 map("n", "<leader>fS", ':execute "Telescope grep_string default_text=" . expand("<cword>")<cr>', opts)
 map("n", "<leader>fF", ':execute "Telescope find_files default_text=" . "" . expand("<cword>")<cr>', opts)
 
+-- Fzf Lua
+-- fzf and grep
+map("n", "<leader>Ff", ":lua require('fzf-lua').files()<CR>") --search cwd
+map("n", "<leader>Fh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>") --search home
+map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>") --search .config
+map("n", "<leader>Fl", ":lua require('fzf-lua').files({ cwd = '~/.local/src' })<CR>") --search .local/src
+map("n", "<leader>Ff", ":lua require('fzf-lua').files({ cwd = '..' })<CR>") --search above
+map("n", "<leader>Fr", ":lua require('fzf-lua').resume()<CR>") --last search
+map("n", "<leader>gg", ":lua require('fzf-lua').grep()<CR>") --grep
+map("n", "<leader>gc", ":lua require('fzf-lua').grep_cword()<CR>") --grep word under cursor
+
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
 --  map <leader>sv to source vimrc
@@ -310,14 +321,3 @@ vim.keymap.set("n", "<leader>hD", function()
 end, { desc = "git [D]iff against last commit" })
 vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle git show [b]lame line" })
 vim.keymap.set("n", "<leader>tD", gitsigns.toggle_deleted, { desc = "[T]oggle git show [D]eleted" })
-
--- Fzf Lua
--- fzf and grep
-map("n", "<leader>F", ":lua require('fzf-lua').files()<CR>") --search cwd
-map("n", "<leader>Fh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>") --search home
-map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>") --search .config
-map("n", "<leader>Fl", ":lua require('fzf-lua').files({ cwd = '~/.local/src' })<CR>") --search .local/src
-map("n", "<leader>Ff", ":lua require('fzf-lua').files({ cwd = '..' })<CR>") --search above
-map("n", "<leader>Fr", ":lua require('fzf-lua').resume()<CR>") --last search
-map("n", "<leader>gg", ":lua require('fzf-lua').grep()<CR>") --grep
-map("n", "<leader>gc", ":lua require('fzf-lua').grep_cword()<CR>") --grep word under cursor
