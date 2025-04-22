@@ -66,7 +66,7 @@ map("n", "<BS>", "ci", opts)
 -- map ; to resume last search
 -- map("n", ";", "<cmd>Telescope resume<cr>", opts)
 
-map("n", "<leader>ff", '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
+-- map("n", "<leader>ff", '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
 map("n", "<leader>g", '<cmd>lua require("telescope.builtin").git_files()<cr>', opts)
 map("n", "<leader>fg", '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts)
 map("n", "<leader>fb", '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
@@ -94,7 +94,7 @@ map("n", "<leader>fF", ':execute "Telescope find_files default_text=" . "" . exp
 
 -- Fzf Lua
 -- fzf and grep
-map("n", "<leader>Ff", ":lua require('fzf-lua').files()<CR>") --search cwd
+map("n", "<leader>ff", ":lua require('fzf-lua').files()<CR>") --search cwd
 map("n", "<leader>Fh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>") --search home
 map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>") --search .config
 map("n", "<leader>Fl", ":lua require('fzf-lua').files({ cwd = '~/.local/src' })<CR>") --search .local/src
