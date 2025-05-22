@@ -127,7 +127,8 @@ return {
     -- }
   },
   ols = {},
-  ocamllsp = {}
+  ocamllsp = {},
+  sourcekit = {}
     -- sourcekit = {
     --     cmd = {
     --         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
