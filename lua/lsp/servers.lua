@@ -140,5 +140,6 @@ return {
         or util.find_git_ancestor(filename)
         or util.root_pattern("Package.swift")(filename)
     end,
-  }
+  },
+  csharp_ls = {},
 }
