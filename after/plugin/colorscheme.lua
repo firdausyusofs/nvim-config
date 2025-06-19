@@ -6,10 +6,10 @@
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 -- set termguicolors
 
-local utils = require("utils")
+local color_overrides = require("utils.color_overrides")
 
 vim.opt.termguicolors = true
 
-utils.color_overrides.setup_colorscheme_overrides()
+color_overrides.setup_colorscheme_overrides()
 
 vim.cmd("colorscheme custom")
