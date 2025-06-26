@@ -52,6 +52,7 @@ require("fzf-lua").setup{
       ["alt-a"]       = "toggle-all",
       ["alt-g"]       = "first",
       ["alt-G"]       = "last",
+      ["ctrl-q"]      = "select-all+accept",
       -- Only valid with fzf previewers (bat/cat/git/etc)
       ["f3"]          = "toggle-preview-wrap",
       ["f4"]          = "toggle-preview",
