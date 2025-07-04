@@ -129,7 +129,23 @@ return {
   ols = {},
   ocamllsp = {},
   -- sourcekit = {}
-  jdtls = {},
+  jdtls = {
+    root_dir = function(_)
+      return vim.fn.getcwd()
+    end,
+    filetypes = { "java" },
+    init_options = {
+      onlyAnalyzeProjectsWithOpenFiles = true,
+      storagePath = vim.fn.stdpath("cache") .. "/jdtls",
+      workspace = {
+        workspaceFolders = {
+          {
+            path = vim.fn.getcwd(),
+          },
+        },
+      },
+    },
+  },
   sourcekit = {
     cmd = {
       "sourcekit-lsp",
