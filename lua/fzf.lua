@@ -12,7 +12,7 @@ require("fzf-lua").setup{
   --   -- SPECIFIC COMMAND/PICKER OPTIONS, SEE BELOW
   --   -- files = { ... },
   previewers = {
-    builtin = { treesitter = { enable = false } }
+    builtin = { treesitter = { enable = true } }
   },
 
   keymap = {

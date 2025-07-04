@@ -129,6 +129,7 @@ return {
   ols = {},
   ocamllsp = {},
   -- sourcekit = {}
+  jdtls = {},
   sourcekit = {
     cmd = {
       "sourcekit-lsp",
