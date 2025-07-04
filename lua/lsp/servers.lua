@@ -129,7 +129,11 @@ return {
   ols = {},
   ocamllsp = {},
   -- sourcekit = {}
-  jdtls = {},
+  jdtls = {
+    root_dir = function()
+      return vim.fn.getcwd()
+    end,
+  },
   sourcekit = {
     cmd = {
       "sourcekit-lsp",
