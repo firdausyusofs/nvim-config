@@ -130,9 +130,7 @@ return {
   ocamllsp = {},
   -- sourcekit = {}
   jdtls = {
-    root_dir = function()
-      return vim.fn.getcwd()
-    end,
+    root_dir = vim.fn.getcwd(),
   },
   sourcekit = {
     cmd = {
