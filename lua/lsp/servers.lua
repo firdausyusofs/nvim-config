@@ -130,7 +130,9 @@ return {
   ocamllsp = {},
   -- sourcekit = {}
   jdtls = {
-    root_dir = vim.fn.getcwd(),
+    root_dir = require("lspconfig.util").root_pattern(".git", "mvnw", "gradlew", "pom.xml", "build.gradle", ".classpath"),
+    filetypes = { "java", "gradle", "groovy", "kotlin" },
+    cmd = { "jdtls" },
   },
   sourcekit = {
     cmd = {
