@@ -1,5 +1,8 @@
+local changetracking = require("vim.lsp._changetracking")
+
 M = {}
-M.on_attach = function(_, bufnr)
+
+M.on_attach = function(client, bufnr)
 	local nmap = function(keys, func, desc)
 		if desc then
 			desc = "LSP: " .. desc
@@ -7,6 +10,12 @@ M.on_attach = function(_, bufnr)
 
 		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 	end
+
+  if client.name == "sourcekit" then
+    pcall(function()
+      changetracking.init(client, bufnr)
+    end)
+  end
 
 	nmap("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
 	nmap("gr", require("telescope.builtin").lsp_references, "Goto References")

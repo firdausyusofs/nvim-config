@@ -35,6 +35,7 @@ for server_name, server_config in pairs(require("lsp.servers")) do
   local on_attach = require("lsp.on_attach").on_attach
   local settings = server_config
   local filetypes = server_config.filetypes
+  local changetracking = require("lsp.changetracking")
 
   lspconfig[server_name].setup({
     capabilities = capabilities,
