@@ -1,3 +1,4 @@
+require("lspcontainers").setup({})
 -- require("mason").setup({
 --   ui = {
 --     border = "rounded",
@@ -46,6 +47,15 @@ for server_name, server_config in pairs(require("lsp.servers")) do
     filetypes = filetypes,
   })
 end
+
+local lsp = require("lspconfig")
+local lspcontainers = require("lspcontainers")
+
+lsp.sourcekit.setup({
+  cmd = lspcontainers.command("sourcekit-lsp"),
+  root_dir = lsp.util.root_pattern("Package.swift", ".git"),
+  filetypes = { "swift" },
+})
 
 vim.diagnostic.config({
   title = false,

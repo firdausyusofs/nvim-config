@@ -137,23 +137,23 @@ return {
     ),
     settings = {}, -- ✅ make sure settings is a serializable table
   },
-  sourcekit = {
-    -- cmd = {
-    --   "sourcekit-lsp",
-    -- },
-    -- cmd = { "env", "LIBRARY_PATH=" .. os.getenv("LIBRARY_PATH"), "SOURCEKIT_LOGGING=1", "sourcekit-lsp" },
-    cmd = {
-      "env",
-      "LIBRARY_PATH=/nix/store/gd2iijcd4yaglkmkz3csbbvg81nd3k7x-gcc-14.2.1.20250322-lib/lib:/nix/store/7kpxf47mzykkdn39lcnhj9z9ngpihamf-glibc-2.40-66/lib",
-      "sourcekit-lsp"
-    },
-    root_dir = function(filename, _)
-      local util = require("lspconfig.util")
-      return util.root_pattern("buildServer.json")(filename)
-        or util.root_pattern("*.xcodeproj", "*.xcworkspace")(filename)
-        or util.find_git_ancestor(filename)
-        or util.root_pattern("Package.swift")(filename)
-    end,
-  },
+  -- sourcekit = {
+  --   -- cmd = {
+  --   --   "sourcekit-lsp",
+  --   -- },
+  --   -- cmd = { "env", "LIBRARY_PATH=" .. os.getenv("LIBRARY_PATH"), "SOURCEKIT_LOGGING=1", "sourcekit-lsp" },
+  --   cmd = {
+  --     "env",
+  --     "LIBRARY_PATH=/nix/store/gd2iijcd4yaglkmkz3csbbvg81nd3k7x-gcc-14.2.1.20250322-lib/lib:/nix/store/7kpxf47mzykkdn39lcnhj9z9ngpihamf-glibc-2.40-66/lib",
+  --     "sourcekit-lsp"
+  --   },
+  --   root_dir = function(filename, _)
+  --     local util = require("lspconfig.util")
+  --     return util.root_pattern("buildServer.json")(filename)
+  --       or util.root_pattern("*.xcodeproj", "*.xcworkspace")(filename)
+  --       or util.find_git_ancestor(filename)
+  --       or util.root_pattern("Package.swift")(filename)
+  --   end,
+  -- },
   csharp_ls = {},
 }
