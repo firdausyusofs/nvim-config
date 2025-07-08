@@ -33,12 +33,14 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 for server_name, server_config in pairs(require("lsp.servers")) do
   local lspconfig = require("lspconfig")
   local on_attach = require("lsp.on_attach").on_attach
+  local root_dir = server_config.root_dir
   local settings = server_config.settings
   local filetypes = server_config.filetypes
 
   lspconfig[server_name].setup({
     capabilities = capabilities,
     on_attach = on_attach,
+    root_dir = root_dir,
     settings = settings,
     filetypes = filetypes,
   })
