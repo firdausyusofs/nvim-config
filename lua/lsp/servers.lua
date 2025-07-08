@@ -138,9 +138,10 @@ return {
     settings = {}, -- ✅ make sure settings is a serializable table
   },
   sourcekit = {
-    cmd = {
-      "sourcekit-lsp",
-    },
+    -- cmd = {
+    --   "sourcekit-lsp",
+    -- },
+    cmd = { "env", "LIBRARY_PATH=" .. os.getenv("LIBRARY_PATH"), "SOURCEKIT_LOGGING=1", "sourcekit-lsp" },
     root_dir = function(filename, _)
       local util = require("lspconfig.util")
       return util.root_pattern("buildServer.json")(filename)
