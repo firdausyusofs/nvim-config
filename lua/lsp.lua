@@ -52,7 +52,9 @@ local lsp = require("lspconfig")
 local lspcontainers = require("lspcontainers")
 
 lsp.sourcekit.setup({
-  cmd = lspcontainers.command("sourcekit-lsp"),
+  cmd = lspcontainers.command("sourcekit-lsp", {
+    image = "swift:6.0.2",
+  }),
   root_dir = lsp.util.root_pattern("Package.swift", ".git"),
   filetypes = { "swift" },
 })
