@@ -1,4 +1,4 @@
-local changetracking = require("vim.lsp._changetracking")
+-- local changetracking = require("vim.lsp._changetracking")
 
 M = {}
 
@@ -11,13 +11,13 @@ M.on_attach = function(client, bufnr)
 		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 	end
 
-  if client.name == "sourcekit" then
-    if vim.api.nvim_buf_is_loaded(bufnr) then
-      pcall(function()
-        changetracking.init(client, bufnr)
-      end)
-    end
-  end
+  -- if client.name == "sourcekit" then
+  --   if vim.api.nvim_buf_is_loaded(bufnr) then
+  --     pcall(function()
+  --       changetracking.init(client, bufnr)
+  --     end)
+  --   end
+  -- end
 
 	nmap("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
 	nmap("gr", require("telescope.builtin").lsp_references, "Goto References")
