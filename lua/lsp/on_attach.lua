@@ -12,9 +12,11 @@ M.on_attach = function(client, bufnr)
 	end
 
   if client.name == "sourcekit" then
-    pcall(function()
-      changetracking.init(client, bufnr)
-    end)
+    if vim.api.nvim_buf_is_loaded(bufnr) then
+      pcall(function()
+        changetracking.init(client, bufnr)
+      end)
+    end
   end
 
 	nmap("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
