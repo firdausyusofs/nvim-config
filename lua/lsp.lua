@@ -39,7 +39,6 @@ for server_name, server_config in pairs(require("lsp.servers")) do
   local cmd = server_config.cmd
 
   lspconfig[server_name].setup({
-    cmd = cmd,
     capabilities = capabilities,
     on_attach = on_attach,
     root_dir = root_dir,
