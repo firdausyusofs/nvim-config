@@ -49,7 +49,7 @@ for server_name, server_config in pairs(require("lsp.servers")) do
 end
 
 local lsp = require("lspconfig")
-local lspcontainers = require("lspcontainers")
+-- local lspcontainers = require("lspcontainers")
 
 lsp.sourcekit.setup({
   -- cmd = lspcontainers.command("sourcekit-lsp", {
