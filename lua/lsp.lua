@@ -57,7 +57,7 @@ lsp.sourcekit.setup({
   --   -- command = { "sourcekit-lsp/.build/release/sourcekit-lsp" },
   -- }),
   cmd = { "nc", "192.168.0.82", "8081" },
-  root_dir = lsp.util.root_pattern("Package.swift", ".git"),
+  root_dir = lsp.util.root_pattern("Package.swift", ".git", ".xcodeproj", ".xcworkspace"),
   filetypes = { "swift" },
   -- root_dir = function(filename, _)
   --     local util = require("lspconfig.util")
