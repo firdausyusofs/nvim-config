@@ -57,6 +57,8 @@ lsp.sourcekit.setup({
   --   -- command = { "sourcekit-lsp/.build/release/sourcekit-lsp" },
   -- }),
   cmd = { "nc", "192.168.0.82", "8081" },
+  root_dir = lsp.util.root_pattern("Package.swift", ".git"),
+  filetypes = { "swift" },
   -- root_dir = function(filename, _)
   --     local util = require("lspconfig.util")
   --     return util.root_pattern("buildServer.json")(filename)
