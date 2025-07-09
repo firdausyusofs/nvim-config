@@ -52,25 +52,19 @@ local lsp = require("lspconfig")
 local lspcontainers = require("lspcontainers")
 
 lsp.sourcekit.setup({
-  cmd = lspcontainers.command("sourcekit-lsp", {
-    image = "sourcekit-local",
-    -- command = { "sourcekit-lsp/.build/release/sourcekit-lsp" },
-  }),
-  capabilities = {
-    workspace = {
-      didChangeWatchedFiles = {
-        dynamicRegistration = true,
-      },
-    },
-  },
-  -- root_dir = function(filename, _)
-  --     local util = require("lspconfig.util")
-  --     return util.root_pattern("buildServer.json")(filename)
-  --       or util.root_pattern("*.xcodeproj", "*.xcworkspace")(filename)
-  --       or util.find_git_ancestor(filename)
-  --       or util.root_pattern("Package.swift")(filename)
-  -- end,
-  -- filetypes = { "swift" },
+  -- cmd = lspcontainers.command("sourcekit-lsp", {
+  --   image = "sourcekit-local",
+  --   -- command = { "sourcekit-lsp/.build/release/sourcekit-lsp" },
+  -- }),
+  cmd = { "nc", "192.168.0.82", "8081" },
+  root_dir = function(filename, _)
+      local util = require("lspconfig.util")
+      return util.root_pattern("buildServer.json")(filename)
+        or util.root_pattern("*.xcodeproj", "*.xcworkspace")(filename)
+        or util.find_git_ancestor(filename)
+        or util.root_pattern("Package.swift")(filename)
+  end,
+  filetypes = { "swift" },
 })
 
 vim.diagnostic.config({
