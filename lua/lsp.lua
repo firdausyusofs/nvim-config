@@ -37,7 +37,6 @@ for server_name, server_config in pairs(require("lsp.servers")) do
   local root_dir = server_config.root_dir
   local settings = server_config.settings
   local filetypes = server_config.filetypes
-  local cmd = server_config.cmd
 
   lspconfig[server_name].setup({
     capabilities = capabilities,
@@ -57,7 +56,7 @@ lsp.sourcekit.setup({
   --   -- command = { "sourcekit-lsp/.build/release/sourcekit-lsp" },
   -- }),
   cmd = { "nc", "192.168.0.82", "8081" },
-  root_dir = lsp.util.root_pattern("Package.swift", ".git", ".xcodeproj", ".xcworkspace"),
+  root_dir = lsp.util.root_pattern("Package.swift", ".git"),
   filetypes = { "swift" },
   -- root_dir = function(filename, _)
   --     local util = require("lspconfig.util")
