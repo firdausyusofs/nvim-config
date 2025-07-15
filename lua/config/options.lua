@@ -11,18 +11,17 @@ local options = {
 	conceallevel = 0,
 	fileencoding = "utf-8",
 	hlsearch = true,
+  smartcase = true,
 	ignorecase = true,
 	mouse = "a",
 	autowriteall = true,
 	pumheight = 10,
 	showmode = false,
 	showtabline = 0,
-	smartcase = true,
 	smartindent = true,
 	autoindent = true,
 	splitbelow = true,
 	splitright = true,
-	swapfile = false,
 	termguicolors = true,
 	timeoutlen = 1000,
 	updatetime = 1,
@@ -30,17 +29,20 @@ local options = {
 	expandtab = true,
 	modifiable = true,
 	foldmethod = "manual",
-	shiftwidth = 2,
 	tabstop = 2,
+  shiftwidth = 2,
 	cursorline = true,
   number = true,
-  breakindent = true,
   relativenumber = true,
-  shiftround = true,
-  showmatch = true,
   numberwidth = 4,
   signcolumn = "yes",
-  wrap = false,
+  shada = { "'10", "<0", "s10", "h" },
+  swapfile = false,
+  breakindent = true,
+  shiftround = true,
+  showmatch = true,
+  wrap = true,
+  linebreak = true,
   scrolloff = 8,
   sidescrolloff = 8,
   laststatus = 3,
@@ -48,6 +50,8 @@ local options = {
   ruler = false,
   guifont = "monospace:h17",
   title = true,
+  titlestring = '%t%( %M%)%( (%{expand("%:~:h")})%)%a (nvim)',
+  more = false,
   confirm = true,
   fillchars = { eob = " " },
   list = true,
@@ -56,11 +60,14 @@ local options = {
   undofile = true,
 	guicursor = "",
   colorcolumn = "80",
+  inccommand = "split",
 }
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+vim.opt.formatoptions:remove("o")
 
 vim.cmd([[colorscheme rose-pine]])
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
