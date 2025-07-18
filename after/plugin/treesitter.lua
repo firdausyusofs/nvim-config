@@ -8,6 +8,14 @@ require("nvim-treesitter.configs").setup({
 		disable = { "yaml" },
 		additional_vim_regex_highlighting = false,
 	},
+  fold = {
+    enable = true,
+    disable = { "yaml" },
+    -- custom = {
+    --   "markdown",
+    --   "markdown_inline",
+    -- },
+  },
 	autopairs = { enable = true },
 	rainbow = {
 		enable = true,
