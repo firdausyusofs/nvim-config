@@ -321,3 +321,6 @@ vim.keymap.set("n", "<leader>hD", function()
 end, { desc = "git [D]iff against last commit" })
 vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle git show [b]lame line" })
 vim.keymap.set("n", "<leader>tD", gitsigns.toggle_deleted, { desc = "[T]oggle git show [D]eleted" })
+
+vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
