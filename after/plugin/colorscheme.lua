@@ -12,6 +12,6 @@ vim.opt.termguicolors = true
 
 -- color_overrides.setup_colorscheme_overrides()
 
--- vim.cmd("colorscheme custom")
+vim.cmd("colorscheme custom")
 --
-vim.cmd("colorscheme gruvbuddy")
+-- vim.cmd("colorscheme gruvbuddy")
