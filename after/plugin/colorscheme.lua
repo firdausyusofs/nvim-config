@@ -12,6 +12,7 @@ vim.opt.termguicolors = true
 
 -- color_overrides.setup_colorscheme_overrides()
 
-vim.cmd("colorscheme custom")
+vim.cmd("colorscheme dosbox-black")
+-- vim.cmd("colorscheme custom")
 --
 -- vim.cmd("colorscheme gruvbuddy")
